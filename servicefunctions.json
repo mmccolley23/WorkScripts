@@ -1,0 +1,261 @@
+{
+	"username": "username",
+	"organization url": "https://yourorg.maps.arcgis.com/",
+	"moderation settings": {
+		"lists": [],
+		"substitutions": {}
+	},
+	"email settings": {
+		"smtp username": "mar11501@esri.com",
+		"smtp server": "smtp.office365.com",
+		"smtp password": "system password",
+		"reply to": "mmccolley@esri.com",
+		"from address": "mmccolley@esri.com",
+		"use tls": true,
+		"substitutions": [
+			["{ID}", "probid"],
+			["{cat}", "category"],
+			["{created}", "CreationDate"],
+			["{detail}", "details"],
+			["{problem}", "probtype"],
+			["{name}", "pocfullname"]
+		]
+	},
+	"services": [{
+		"id sequence": "Animal",
+		"email": [{
+			"field": "emailstatus",
+			"sent value": "Y",
+			"sql": "(status = 'Submitted') AND ((emailstatus Is Null) OR (emailstatus = '') OR (emailstatus = '<Null>') OR (emailstatus = 'Null'))",
+			"recipient": "mmccolley@esri.com",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\LocalNEorg\\internal_email_template.html",
+			"subject": "Animal Report Internal"
+		}, {
+			"field": "emailstatus",
+			"sent value": "Yes",
+			"sql": "(status = 'Submitted') AND (emailstatus = 'Y')",
+			"recipient": "pocemail",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\user_email_template.html",
+			"subject": "Animal Report Received"
+		}],
+		"url": "https://services1.arcgis.com/nVGCamxXx63G5nR8/arcgis/rest/services/CitizenProblems_animal_1b611154ec814fd3a7f45b511f0a45b9/FeatureServer/0",
+		"id field": "probid",
+		"moderation": [],
+		"enrichment": []
+	}, {
+		"id sequence": "Blight",
+		"email": [{
+			"field": "emailstatus",
+			"sent value": "Y",
+			"sql": "(status = 'Submitted') AND ((emailstatus Is Null) OR (emailstatus = '') OR (emailstatus = '<Null>') OR (emailstatus = 'Null'))",
+			"recipient": "mmccolley@esri.com",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\internal_email_template.html",
+			"subject": "Blight Report Internal"
+		}, {
+			"field": "emailstatus",
+			"sent value": "Yes",
+			"sql": "(status = 'Submitted') AND (emailstatus = 'Y')",
+			"recipient": "pocemail",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\user_email_template.html",
+			"subject": "Blight Report Received"
+		}],
+		"url": "https://services1.arcgis.com/nVGCamxXx63G5nR8/arcgis/rest/services/CitizenProblems_blight_1b611154ec814fd3a7f45b511f0a45b9/FeatureServer/0",
+		"id field": "probid",
+		"moderation": [],
+		"enrichment": []
+	}, {
+		"id sequence": "Health",
+		"email": [{
+			"field": "emailstatus",
+			"sent value": "Y",
+			"sql": "(status = 'Submitted') AND ((emailstatus Is Null) OR (emailstatus = '') OR (emailstatus = '<Null>') OR (emailstatus = 'Null'))",
+			"recipient": "mmccolley@esri.com",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\internal_email_template.html",
+			"subject": "Health Report Internal"
+		}, {
+			"field": "emailstatus",
+			"sent value": "Yes",
+			"sql": "(status = 'Submitted') AND (emailstatus = 'Y')",
+			"recipient": "pocemail",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\user_email_template.html",
+			"subject": "Health Report Received"
+		}],
+		"url": "https://services1.arcgis.com/nVGCamxXx63G5nR8/arcgis/rest/services/CitizenProblems_health_1b611154ec814fd3a7f45b511f0a45b9/FeatureServer/0",
+		"id field": "probid",
+		"moderation": [],
+		"enrichment": []
+	}, {
+		"id sequence": "Landuse",
+		"email": [{
+			"field": "emailstatus",
+			"sent value": "Y",
+			"sql": "(status = 'Submitted') AND ((emailstatus Is Null) OR (emailstatus = '') OR (emailstatus = '<Null>') OR (emailstatus = 'Null'))",
+			"recipient": "mmccolley@esri.com",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\internal_email_template.html",
+			"subject": "Landuse Report Internal"
+		}, {
+			"field": "emailstatus",
+			"sent value": "Yes",
+			"sql": "(status = 'Submitted') AND (emailstatus = 'Y')",
+			"recipient": "pocemail",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\user_email_template.html",
+			"subject": "Landuse Report Received"
+		}],
+		"url": "https://services1.arcgis.com/nVGCamxXx63G5nR8/arcgis/rest/services/CitizenProblems_landuse_1b611154ec814fd3a7f45b511f0a45b9/FeatureServer/0",
+		"id field": "probid",
+		"moderation": [],
+		"enrichment": []
+	}, {
+		"id sequence": "Snow/Ice",
+		"email": [{
+			"field": "emailstatus",
+			"sent value": "Y",
+			"sql": "(status = 'Submitted') AND ((emailstatus Is Null) OR (emailstatus = '') OR (emailstatus = '<Null>') OR (emailstatus = 'Null'))",
+			"recipient": "mmccolley@esri.com",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\internal_email_template.html",
+			"subject": "Snow Report Internal"
+		}, {
+			"field": "emailstatus",
+			"sent value": "Yes",
+			"sql": "(status = 'Submitted') AND (emailstatus = 'Y')",
+			"recipient": "pocemail",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\user_email_template.html",
+			"subject": "Snow Report Received"
+		}],
+		"url": "https://services1.arcgis.com/nVGCamxXx63G5nR8/arcgis/rest/services/CitizenProblems_snowice_1b611154ec814fd3a7f45b511f0a45b9/FeatureServer/0",
+		"id field": "probid",
+		"moderation": [],
+		"enrichment": []
+	}, {
+		"id sequence": "Park/Tree",
+		"email": [{
+			"field": "emailstatus",
+			"sent value": "Y",
+			"sql": "(status = 'Submitted') AND ((emailstatus Is Null) OR (emailstatus = '') OR (emailstatus = '<Null>') OR (emailstatus = 'Null'))",
+			"recipient": "mmccolley@esri.com",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\internal_email_template.html",
+			"subject": "Park Report Internal"
+		}, {
+			"field": "emailstatus",
+			"sent value": "Yes",
+			"sql": "(status = 'Submitted') AND (emailstatus = 'Y')",
+			"recipient": "pocemail",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\user_email_template.html",
+			"subject": "Park Report Received"
+		}],
+		"url": "https://services1.arcgis.com/nVGCamxXx63G5nR8/arcgis/rest/services/CitizenProblems_parktree_1b611154ec814fd3a7f45b511f0a45b9/FeatureServer/0",
+		"id field": "probid",
+		"moderation": [],
+		"enrichment": []
+	}, {
+		"id sequence": "Trash",
+		"email": [{
+			"field": "emailstatus",
+			"sent value": "Y",
+			"sql": "(status = 'Submitted') AND ((emailstatus Is Null) OR (emailstatus = '') OR (emailstatus = '<Null>') OR (emailstatus = 'Null'))",
+			"recipient": "mmccolley@esri.com",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\internal_email_template.html",
+			"subject": "Trash Report Internal"
+		}, {
+			"field": "emailstatus",
+			"sent value": "Yes",
+			"sql": "(status = 'Submitted') AND (emailstatus = 'Y')",
+			"recipient": "pocemail",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\user_email_template.html",
+			"subject": "Trash Report Received"
+		}],
+		"url": "https://services1.arcgis.com/nVGCamxXx63G5nR8/arcgis/rest/services/CitizenProblems_trash_1b611154ec814fd3a7f45b511f0a45b9/FeatureServer/0",
+		"id field": "probid",
+		"moderation": [],
+		"enrichment": []
+	}, {
+		"id sequence": "Road",
+		"email": [{
+			"field": "emailstatus",
+			"sent value": "Y",
+			"sql": "(status = 'Submitted') AND ((emailstatus Is Null) OR (emailstatus = '') OR (emailstatus = '<Null>') OR (emailstatus = 'Null'))",
+			"recipient": "mmccolley@esri.com",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\internal_email_template.html",
+			"subject": "Road Report Internal"
+		}, {
+			"field": "emailstatus",
+			"sent value": "Yes",
+			"sql": "(status = 'Submitted') AND (emailstatus = 'Y')",
+			"recipient": "pocemail",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\user_email_template.html",
+			"subject": "Road Report Received"
+		}],
+		"url": "https://services1.arcgis.com/nVGCamxXx63G5nR8/arcgis/rest/services/CitizenProblems_road_1b611154ec814fd3a7f45b511f0a45b9/FeatureServer/0",
+		"id field": "probid",
+		"moderation": [],
+		"enrichment": []
+	}, {
+		"id sequence": "Water/Sewer",
+		"email": [{
+			"field": "emailstatus",
+			"sent value": "Y",
+			"sql": "(status = 'Submitted') AND ((emailstatus Is Null) OR (emailstatus = '') OR (emailstatus = '<Null>') OR (emailstatus = 'Null'))",
+			"recipient": "mmccolley@esri.com",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\internal_email_template.html",
+			"subject": "Utility Report Internal"
+		}, {
+			"field": "emailstatus",
+			"sent value": "Yes",
+			"sql": "(status = 'Submitted') AND (emailstatus = 'Y')",
+			"recipient": "pocemail",
+			"template": "C:\\Users\\mar11501\\Documents\\FinalScripts\\LocalNEorg\\user_email_template.html",
+			"subject": "Utility Report Received"
+		}],
+		"url": "https://services1.arcgis.com/nVGCamxXx63G5nR8/arcgis/rest/services/CitizenProblems_utility_1b611154ec814fd3a7f45b511f0a45b9/FeatureServer/0",
+		"id field": "probid",
+		"moderation": [],
+		"enrichment": []
+	}],
+	"password": "",
+	"id sequences": [{
+		"name": "Animal",
+		"interval": 1,
+		"next value": 3,
+		"pattern": "animal-{0:05d}"
+	}, {
+		"name": "Blight",
+		"interval": 1,
+		"next value": 3,
+		"pattern": "blight-{0:05d}"
+	}, {
+		"name": "Health",
+		"interval": 1,
+		"next value": 1,
+		"pattern": "health-{0:05d}"
+	}, {
+		"name": "Landuse",
+		"interval": 1,
+		"next value": 1,
+		"pattern": "land-{0:05d}"
+	}, {
+		"name": "Snow/Ice",
+		"interval": 1,
+		"next value": 2,
+		"pattern": "snow-{0:05d}"
+	}, {
+		"name": "Park/Tree",
+		"interval": 1,
+		"next value": 1,
+		"pattern": "park-{0:05d}"
+	}, {
+		"name": "Trash",
+		"interval": 1,
+		"next value": 3,
+		"pattern": "trash-{0:05d}"
+	}, {
+		"name": "Road",
+		"interval": 1,
+		"next value": 4,
+		"pattern": "road-{0:05d}"
+	}, {
+		"name": "Water/Sewer",
+		"interval": 1,
+		"next value": 1,
+		"pattern": "util-{0:05d}"
+	}]
+}
